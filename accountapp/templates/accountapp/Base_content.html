@@ -3,8 +3,14 @@
 {% block content %}
 
 
-    <div style="margin:2rem; text-align: center;">
+    <div style="margin:2rem; text-align:center;">
         <h1>CIJ CIJ CIJ</h1>
+
+        <form action="/accounts/hello_world/" method="post">
+            {% csrf_token %}
+            <input class="btn btn-secondary px-4" type="submit"></input>
+        </form>
+
         <h3>{{ text }}</h3>
     </div>
 
