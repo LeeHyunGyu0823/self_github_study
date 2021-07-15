@@ -5,6 +5,7 @@
     <div class="header_button">
         <span>nna1</span>
         <span>nna2</span>
+        {% if not user.is_authenticated %}
         <span>
             <a href ="{% url 'accountapp:login' %}">
                 Login
@@ -15,5 +16,12 @@
                 Signup
             </a>
         </span>
+        {% else %}
+        <span>
+            <a href ="{% url 'accountapp:logout' %}">
+                Logout
+            </a>
+        </span>
+        {% endif %}
     </div>
 </div>
