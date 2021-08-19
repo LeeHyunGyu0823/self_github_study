@@ -48,7 +48,7 @@ class AccountDetailView(DetailView, MultipleObjectMixin):
     def get_context_data(self, **kwargs):
         article_list = Article.objects.filter(writer=self.object)
         return super().get_context_data(object_list=article_list, **kwargs)
-    
+
 @method_decorator(own_decorators, 'get')
 @method_decorator(own_decorators, 'post')
 class AccountUpdateView(UpdateView):
