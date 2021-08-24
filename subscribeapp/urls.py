@@ -1,6 +1,6 @@
 from django.urls import path
 
-from subscribeapp.views import SubscriptionView
+from subscribeapp.views import SubscriptionView, SubscriptionListView
 
 app_name = 'subscribeapp'
 
